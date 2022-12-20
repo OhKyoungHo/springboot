@@ -1,0 +1,11 @@
+package com.example.domain;
+
+public class BoardVO {
+	private int seq;
+	private String writer;
+	private String title;
+	private String content;
+	private String regdate;
+	private int cnt;
+
+}
