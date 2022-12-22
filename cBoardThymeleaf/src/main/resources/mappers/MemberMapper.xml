@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dao.MemberDAO">
+	
+	<!--회원정보 입력-->
+	<insert id="insertMemberForm" parameterType="com.example.domain.MemberVO">
+		INSERT INTO MEMBER(USERID, USERPASS, USERNAME)
+		VALUES(#{userid}, #{userpass}, #{username})
+	</insert>
+	
+	<select id="login" parameterType="com.example.domain.MemberVO"  resultType="com.example.domain.MemberVO">
+		  SELECT *
+          FROM member
+          WHERE USERID = #{userid}
+          <if test ="userpass !=null">
+          		AND USERPASS = #{userpass}
+          </if>		
+		
+</select> 	
+
+	
+	
+
+</mapper>
