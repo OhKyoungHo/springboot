@@ -1,0 +1,18 @@
+SQL> create user scott identified by tiger;
+
+User created.
+
+SQL> grant connect, resource, dba ro scott;
+grant connect, resource, dba ro scott
+                         *
+ERROR at line 1:
+ORA-00990: missing or invalid privilege
+
+
+SQL> grant connect, resource, dba to scott;
+
+Grant succeeded.
+
+SQL> conn scott/tiger
+Connected.
+SQL> 

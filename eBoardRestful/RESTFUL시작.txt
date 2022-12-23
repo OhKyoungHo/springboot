@@ -1,0 +1,19 @@
+
+-------------------------------------
+HTTP 메소드 의미
+-------------------------------------
+GET			READ(SELECT)
+POST		CREATE(INSERT)
+PUT			UPDATE	
+DELETE		DELETE
+
+[#] 기존 URL과 비교
+-------------------------------------
+기능				기존URL							요청			Restful URL					
+-------------------------------------			
+게시판목록보기		/board/getBoardList				GET			/board
+게시글 작성화면		/board/insertBoardForm			GET			/board/write(입력한 값)
+게시글 작성		/board/saveBoard				POST		/board/write(DB에 저장되어 있는 값)
+게시글 상세보기		/board/getBoard?seq=글번호		GET			/board/글번호
+게시글 수정		/board/updateBoard?seq=글번호		PUT			/board/글번호
+게시글 삭제		/board/deleteBoard?seq=글번호		DELETE		/board/글번호
